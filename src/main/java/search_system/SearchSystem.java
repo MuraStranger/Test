@@ -23,6 +23,7 @@ public class SearchSystem implements ISearchSystem {
     }
 
 
+    @Override
     public void showResultSearch() throws Exception{
         Elements links = getLink(nameSystem, search);
         String title = links.get(0).text();
@@ -32,6 +33,7 @@ public class SearchSystem implements ISearchSystem {
         System.out.println("URL: " + url);
     }
 
+    @Override
     public Elements getLink (String nameSystem, String search) throws Exception{
         String charset = "UTF-8";
         String userAgent = "Mozilla/5.0 (Android 7.1.1; Mobile; rv:52.0) Gecko/52.0 Firefox/52.0";
